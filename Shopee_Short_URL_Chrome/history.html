@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <title>蝦皮網址紀錄</title>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/datatables.bs5.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container-fluid px-5 d-flex justify-content-center">
+    <div class="w-100">
+      <h1 class="text-center my-2">蝦皮短網址紀錄</h1>
+      <table id="historyTable" class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>時間</th>
+            <th>標題</th>
+            <th>網址</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <button id="themeToggle" class="btn btn-outline-secondary rounded-circle position-fixed top-0 start-0 m-2">
+    <i id="themeIcon" class="fas fa-sun"></i>
+  </button>
+  <button id="topBtn" class="btn btn-secondary position-fixed bottom-0 end-0 m-2">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/datatables.bs5.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="history.js"></script>
+</body>
+</html>
