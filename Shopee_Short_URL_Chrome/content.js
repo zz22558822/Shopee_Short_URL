@@ -3,13 +3,17 @@ let lastUrl = location.href;
 let browserApi = (typeof browser !== "undefined" && browser.storage) ? browser : chrome;
 let isLogEnabled = true
 function generateShortURL() {
-  const match = location.href.match(/-i\.(\d+)\.(\d+)/);
+  const cleanHref = location.href.split('?')[0];
+  let match = cleanHref.match(/-i\.(\d+)\.(\d+)/);
+  if (!match) {
+    match = cleanHref.match(/\/product\/(\d+)\/(\d+)/);
+  }
   if (match) {
     logSwitch('log', "✅ 符合網址:", match[1], match[2]);
     return `https://shopee.tw/0-i.${match[1]}.${match[2]}`;
   }
   logSwitch('warn', "沒有找到匹配的網址。");
-  return location.href;
+  return cleanHref;
 }
 function copyToClipboard(text) {
   navigator.clipboard.writeText(text).then(() => {
@@ -71,7 +75,7 @@ function createButton() {
       const titleElement = document.querySelector(".page-product .container h1");
       const title = titleElement ? titleElement.textContent.trim() : "（無標題）";
       const record = {
-        time: new Date().toLocaleString(),
+        time: new Date().toISOString(),
         title: title,
         url: shortURL
       };
