@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "蝦皮短網址",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "將 Shopee 商品網址轉換成短網址並複製到剪貼簿，提供記錄管理介面。",
   "icons": {
     "16": "images/icon16.png",
