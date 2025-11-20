@@ -53,6 +53,10 @@
 
 ## 📝 更新紀錄
 
+### 📌2025/11/19 — [v1.0.3](https://github.com/zz22558822/Shopee_Short_URL/releases/tag/v1.0.3)
+- ✅ 更新使用 toISOString
+- ✅ 更新 正則判斷以匹配新版格式網址
+
 ### 📌2025/4/18 — [v1.0.2](https://github.com/zz22558822/Shopee_Short_URL/releases/tag/v1.0.2)
 - ✅ 更新 Firefox 支援
 - ✅ 更新 Edge 支援
